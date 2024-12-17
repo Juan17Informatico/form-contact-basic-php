@@ -11,24 +11,27 @@
 
 <body>
 
-    <header>
-        <h1>Formulario de Contacto</h1>
+    <header class="header-container">
+        <h1 class="h1-form" >Formulario de Contacto</h1>
     </header>
-    <main>
-        <form action="../src/Contact.php" method="post" >
-            <label for="name">Nombre:</label>
-            <input type="text" name="name" id="name" required >
+    <main class="main-container" >
+        <form action="../src/Contact.php" method="post" class="form-container" >
+            <label for="name" class="label-form" >Nombre:</label>
+            <input type="text" class="input-form" name="name" id="name" placeholder="Juan Pablo" required >
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="text" name="email" id="email" required >
+            <label for="email" class="label-form" >Correo Electrónico:</label>
+            <input type="text" class="input-form" name="email" id="email" placeholder="juancampuzano@gmail.com" required >
             
-            <label for="message">Mensaje:</label>
-            <textarea name="message" id="message" rows="5" ></textarea>
+            <label for="message" class="label-form" >Mensaje:</label>
+            <textarea class="textarea-form" name="message" id="message" rows="5" ></textarea>
         
-            <button type="submit" >Enviar</button>
+            <button type="submit" class="submit-btn-form" >Enviar</button>
         </form>
     </main>
-    <footer></footer>
+    <!-- <footer class="footer-container"> 
+        <p class="footer-text" >@Copyright - 2024</p>
+        <p class="footer-text" >Juan Campuzano</p>
+    </footer> -->
 
     <script src="public/js/scripts.js" ></script>
 </body>
