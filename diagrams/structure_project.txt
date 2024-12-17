@@ -1,0 +1,23 @@
+form-contact-basic/
+│
+├── config/              → Configuraciones generales, conexión a la BD
+│   └── database.php     → Archivo para la configuración de conexión MySQL
+│
+├── public/              → Carpeta pública del servidor (archivos accesibles)
+│   ├── css/             → Archivos CSS para los estilos
+│   ├── js/              → Archivos JavaScript
+│   ├── images/          → Imágenes (si las necesitas)
+│   └── index.php        → Página principal con el formulario de contacto
+│
+├── src/                 → Lógica principal de la aplicación
+│   ├── Contact.php      → Clase o script que maneja el formulario y PHPMailer
+│   └── Mailer.php       → Clase que configura y envía el correo con PHPMailer
+│
+├── templates/           → Plantillas HTML o vistas
+│   └── contact-form.php → Plantilla del formulario de contacto
+│
+├── vendor/              → Carpeta donde Composer guarda las librerías
+│
+├── .env                 → Variables de entorno (credenciales sensibles)
+├── composer.json        → Dependencias de Composer
+└── README.md            → Documentación del proyecto
