@@ -19,7 +19,9 @@ body {
         rgba(39, 71, 105, 1) 50%,
         rgba(103, 40, 57, 1) 100%
     );
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header-container {
@@ -29,7 +31,7 @@ body {
 }
 
 .h1-form {
-    margin-top: 10px;
+    align-content: center;
     background: rgb(54, 21, 30);
     background: linear-gradient(
         90deg,
@@ -37,62 +39,88 @@ body {
         rgba(39, 71, 105, 0.363) 50%,
         rgba(103, 40, 57, 0.418) 100%
     );
-    border: 1px solid rgb(54, 21, 30);
     border-radius: 20px;
+    border: 1px solid rgb(54, 21, 30);
     box-shadow: 0px 5px 30px 7px black;
+    color: rgb(207, 203, 203);
+    margin-top: 10px;
+    max-height: 100px;
     max-width: 450px;
     min-width: 300px;
-    align-content: center;
     padding: 20px;
-    color: rgb(207, 203, 203);
-    max-height: 100px;
+}
+
+.main-container{
+    flex: 1;
 }
 
 .form-container {
-    max-width: 500px;
-    margin: 0px auto;
-    padding: 20px;
     background: #1d0b10;
     border-radius: 15px;
     box-shadow: 0px 5px 15px 4px rgba(0, 0, 0, 0.548);
+    margin: 0px auto;
+    max-width: 500px;
+    padding: 20px;
 }
 
 .label-form {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 18px;
     color: #f9f0f3;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .input-form,
 .textarea-form {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
 }
 
-.input-form{
-    background-color: #D2899D;
-    outline: none;
+.input-form {
+    background-color: #d2899d;
     color: #1d0b10;
+    outline: none;
 }
-
 
 .submit-btn-form {
-    background: #F9F0F3;
-    color: var(--color-1);
-    padding: 10px 15px;
-    border: none;
+    background: #f9f0f3;
     border-radius: 5px;
+    border: none;
+    color: var(--color-1);
     cursor: pointer;
-    font-weight: 500;
     font-size: 17px;
+    font-weight: 500;
+    padding: 10px 15px;
     transition: all ease-in 0.3s;
 }
 
 .submit-btn-form:hover {
-    background-color: #D1899E;
+    background-color: #d1899e;
+}
+
+.footer-container {
+    background-color: rgba(39, 71, 105, 0.3);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.footer-text {
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: #f9f0f3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
 }
