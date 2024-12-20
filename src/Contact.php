@@ -1,7 +1,5 @@
 <?php
 
-use App\Mailer;
-
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/Mailer.php';
 
@@ -91,7 +89,7 @@ function showResponse(string $status, string $message): void
 <body>
     <h1>$title</h1>
     <p class="message">$message</p>
-    <a href="/">Volver al formulario</a>
+    <a href="../public">Volver al formulario</a>
 </body>
 </html>
 HTML;
