@@ -18,7 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Guardar en la base de datos
     try {
         $db = (new Database())->getConnection();
+<<<<<<< HEAD
         $stmt = $db->prepare("INSERT INTO contacts (name, email, message) VALUES (:name, :email, :message)");
+=======
+        $stmt = $db->prepare("INSERT INTO contact_form (name, email, message) VALUES (:name, :email, :message)");
+>>>>>>> 3368f680fed27161e46312b5b6d32b2be17e3e96
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':message', $message);
