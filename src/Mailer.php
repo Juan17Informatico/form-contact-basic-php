@@ -13,7 +13,7 @@ class Mailer
 {
     private $mail;
 
-    public function __construct()
+    public function __construct(string $fromAddres, string $fromName)
     {
         $this->mail = new PHPMailer(true);
 
@@ -28,7 +28,7 @@ class Mailer
             $this->mail->Port = $_ENV['MAIL_PORT'];
 
             // Remitente predeterminado
-            $this->mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
+            $this->mail->setFrom($fromAddres, $fromName);
         } catch (Exception $e) {
             error_log("Error en la configuración de PHPMailer: " . $e->getMessage());
             throw $e;

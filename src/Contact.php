@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Enviar correo electrónico
     try {
-        $mailer = new Mailer();
+        $mailer = new Mailer($email, $name);
         $mailer->send($email, "Nuevo mensaje de $name", $message);
     } catch (Exception $e) {
         showResponse('error', 'No se pudo enviar el correo electrónico.');
